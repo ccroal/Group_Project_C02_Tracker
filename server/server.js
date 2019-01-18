@@ -1,18 +1,24 @@
 const express = require('express');
-const path = require('./');
-const MongoClient = require('mongodb');
-const CreateRouter = require('./helper/create_router.js');
-const Parser = require('Parser');
+const app = express();
+const path = require('path');
+const MongoClient = require('mongodb').MongoClient;
+const createRouter = require('./helpers/create_router.js');
+const parser = require('body-parser');
 
-MongoClient.connect()
-app.listen(3000, () => {
+const publicPath = path.join(_dirname, '../client/public');
+app.use(express.static(publicPath));
 
+app.use(parser.json());
+
+MongoClient.connect('mondgodb://localhost:27017')
+.then((client) => {
+  const db = client.db('calculator_hub');
+  const calculatorCollection = db.collection('calculator');
+  const calcRouter = createRouter(calculatorCollection);
+  app.use('/api/calculator', calcRouter);
 })
+.catch(console.error);
 
-
-const publicPath = function {
-
-
-}
-app.use parser,
-app.use express
+app.listen(3000, function () => {
+console.log(`Listening on port ${this.address().port}`);
+});
