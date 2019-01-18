@@ -1,9 +1,17 @@
 const express = require('express');
-const mongoData = require('mongodb');
+const ObjectID = require('mongodb').ObjectID;
 
-const CreateRouter = {
+const createRouter = function (collection) {
 
+  const router = express.Router();
 
+  router.get('/', (req, res) => {
+    collection.find()
+    .toArray()
+    .then((docs) => res.json(docs))
+  });
+
+  return router;
 };
 
-module.exports = CreateRouter;
+module.exports = createRouter;
