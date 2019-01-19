@@ -66,13 +66,19 @@ const Calculate = require('../models/calculate.js');
     assert.strictEqual(actual, 2898)
   })
 
+  it('should calculate plastic', function(){
+    const actual = result.calculatePlastic(formInput.plasticWaste);
+    assert.strictEqual(actual, 694)
+  })
+
   it('should calculate energy use', function(){
     const actual = result.calculateEnergy(formInput.energy)
     assert.strictEqual(actual, 638)
   })
 
-  // it('should calculate total CO2', function(){
-  //   const actual = result.calculateTotal()
-  // })
+  it('should calculate total CO2', function(){
+    const actual = result.calculateTotal(formInput.car, formInput.bus, formInput.train, formInput.plane, formInput.foodWaste, formInput.plasticWaste, formInput.energy)
+    assert.strictEqual(actual, 8443)
+  })
 
 })

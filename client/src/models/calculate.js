@@ -43,9 +43,24 @@ Calculate.prototype.calculateFood = function(foodWaste){
   };
 };
 
+Calculate.prototype.calculatePlastic = function (bottles) {
+  const plastic = bottles * 0.445 * 52;
+  return Math.round(plastic)
+}
+
 Calculate.prototype.calculateEnergy = function(kwh){
   const energy = kwh * 0.354224 * 12;
   return Math.round(energy);
 };
+
+Calculate.prototype.calculateTotal = function(car, bus, train, plane, foodWaste, plasticWaste, energy){
+  const transportTotal = this.calculateTransport(car, bus, train);
+  const airTravelTotal = this.calculateAirTravel(plane);
+  const foodTotal = this.calculateFood(foodWaste);
+  const plasticWasteTotal = this.calculatePlastic(plasticWaste);
+  const energyTotal = this.calculateEnergy(energy);
+  const total = transportTotal + airTravelTotal + foodTotal + plasticWasteTotal + energyTotal
+  return total
+}
 
 module.exports = Calculate;
