@@ -24,7 +24,7 @@ db.calculator.insertMany([
     food: 2000,
     plastic: 450,
     power: 780
-  }
+  },
 
   {
   transport: 5000,
