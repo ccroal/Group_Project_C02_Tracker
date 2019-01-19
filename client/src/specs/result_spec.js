@@ -31,8 +31,34 @@ const Result = require('../models/result.js');
     assert.strictEqual(actual, 491)
   });
 
-  // it('should calculate transport' function(){
-  //   const actual = result.transport;
-  //   assert.strictEqual(actual, 1479)
+  it('should calculate train travel', function(){
+    const actual = result.calculateTrain(formInput.train);
+    assert.strictEqual(actual, 137)
+  });
+
+  it('should calculate transport', function(){
+    const actual = result.calculateTransport(formInput.car, formInput.bus, formInput.train);
+    assert.strictEqual(actual, 1479)
+  })
+
+  it('should calculate food waste vegan', function(){
+    const actual = result.calculateFood('vegan');
+    assert.strictEqual(actual, 738)
+  })
+
+  it('should calculate food waste vegetarian', function(){
+    const actual = result.calculateFood('vegetarian');
+    assert.strictEqual(actual, 1247)
+  })
+
+  it('should calculate food waste omnivore', function(){
+    const actual = result.calculateFood('omnivore');
+    assert.strictEqual(actual, 2513)
+  })
+
+  it('should calculate food waste heavy', function(){
+    const actual = result.calculateFood('heavy meat eater');
+    assert.strictEqual(actual, 2898)
+  })
 
 })
