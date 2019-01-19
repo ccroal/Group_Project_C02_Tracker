@@ -4,15 +4,25 @@ const FormView = function (form) {
   this.form = form
 }
 
+FormView.prototype.setupEventListeners = function() {
+  FormView.prototype.rendForm()
+  this.form.addEventListener('submit', function (event) {
+    event.preventDefault()
+    const submitForm = this.form.value
+    PubSub.publish('FormView:formSubmit', submitForm)
+
+    submitForm.reset()
+  })
+}
 
 FormView.prototype.rendForm = function() {
 
-const form = createElement('form')
+const mainForm = createElement('form')
 form.id = ("new-form")
-form.appendChild(formContainer)
 
 const formContainer = createElement('div')
 formContainer.id = ('Co2Form-wrap')
+mainForm.appendChild(formContainer)
 
 const heading = this.createHeading("Co2 Questions")
 formContainer.appendChild(heading)
@@ -89,7 +99,7 @@ formContainer.appendChild(answer8)
 
 const submit = this.createSubmitButton("button", "submit-button", "Submit")
 formContainer.appendChild(submit)
-}
+};
 
 
 FormView.prototype.createHeading = function (textContent) {
@@ -124,7 +134,7 @@ FormView.prototype.createSelect = function () {
   const select = createElement('select')
 };
 
-FormView,prototype.createSubmitButton = function(type, idName, name) {
+FormView.prototype.createSubmitButton = function(type, idName, name) {
   const button = createElement("input")
   input.type = type
   input.id = idName
