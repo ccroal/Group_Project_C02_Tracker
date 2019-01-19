@@ -3,39 +3,35 @@ db.dropDatabase();
 
 db.calculator.insertMany([
   {
-    transport: {
-      car: 150,
-      bus: 0,
-      train: 0
-    },
-    air: 2000,
-    food: "Meat",
-    plastic: 19,
-    gas: 75,
-    electric: 100
+    transport: 2340,
+    airTravel: 4000,
+    food: 2090,
+    plastic: 689,
+    power: 458
   },
+
   {
-    transport: {
-      car: 80,
-      bus: 15,
-      train: 0
-    },
-    air: 12000,
-    food: "Vegan",
-    plastic: 10,
-    gas: 150,
-    electric: 420
+    transport: 3750,
+    airTravel: 2756,
+    food: 3000,
+    plastic: 500,
+    power: 900
   },
+
   {
-    transport: {
-      car: 0,
-      bus: 5,
-      train: 100
-    },
-    air: 60000,
-    food: "Omnivore",
-    plastic: 52,
-    gas: 50,
-    electric: 90
+    transport: 4750,
+    airTravel: 1000,
+    food: 2000,
+    plastic: 450,
+    power: 780
   }
+
+  {
+  transport: 5000,
+  airTravel: 2000,
+  food: 2158,
+  plastic: 600,
+  power: 900
+  }
+
 ]);
