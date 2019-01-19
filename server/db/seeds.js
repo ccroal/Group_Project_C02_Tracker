@@ -33,7 +33,7 @@ db.calculator.insertMany([
       train: 100
     },
     air: 60000,
-    food: "Omnibore",
+    food: "Omnivore",
     plastic: 52,
     gas: 50,
     electric: 90
