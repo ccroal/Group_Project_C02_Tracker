@@ -1,6 +1,6 @@
 body {
   font-family: 'Nanum Brush Script', cursive;
-  /* background-image: url('./images/background.jpeg'); */
+  background-image: url('./images/blue-sky.jpg'); */
 }
 
 @font-face {
@@ -23,20 +23,32 @@ body {
   text-align: center;
   position: sticky;
   font-family: 'flower3', sans-serif;
+  margin-bottom: 20px;
 }
 
 #top_banner a {
   color: yellow;
+  text-decoration: none;
+  padding: 5px;
 }
 
-header {
+#top_banner a:hover {
+  background-color: yellow;
+  color: green;
+  border-radius: 10px;
+  border-color: yellow;
+}
+
+header h1 {
   font-family: 'flower3', sans-serif;
   color: #000;
+  text-align: center;
+  font-size: 80px;
 }
 
 .container {
-  margin-left: 40px;
-  margin-right: 40px;
+  /* margin-left: 40px;
+  margin-right: 150px; */
   background-color: #ffffff;
 }
 
@@ -75,3 +87,53 @@ ul {
   background-color: yellow;
 
 }
+
+.carousel-item {
+  margin: 0px
+}
+
+.d-block {
+  height: 440px;
+}
+
+.glyphicon {
+
+  color: #ffffff;
+}
+
+#form {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  background-color: green;
+  color: yellow;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 15px;
+  border-color: green;
+  border-style: groove;
+  border-width: 5px;
+}
+
+.col-md-3 {
+  margin-top: 50px;
+  font-size: 25px;
+  /* margin-left: 2px;
+  border: 1px dashed green;
+  border-radius: 15px; */
+}
+
+.col-md-3 h4 {
+  font-size: 40px;
+}
+
+.col-md-3 img {
+  height: 100px;
+  width: 145px;
+
+}
+/* #form {
+  font-size: 30px;
+  font-weight: bolder;
+  color: yellow;
+} */
