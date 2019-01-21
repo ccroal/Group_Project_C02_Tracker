@@ -12,9 +12,7 @@ form.rendForm()
 form.setupEventListeners()
 
 
-
-
 const results = new Results()
 results.bindEvents()
 results.all()
-})
+});

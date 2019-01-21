@@ -1,9 +1,9 @@
 body {
   font-family: 'Nanum Brush Script', cursive;
-
+  /* background-image: url('./images/background.jpeg'); */
 }
 
-@@font-face {
+@font-face {
   font-family: 'flower3';
   src: url('./fonts/flower3.TTF');
   src:
@@ -22,10 +22,22 @@ body {
   font-size: 30px;
   text-align: center;
   position: sticky;
+  font-family: 'flower3', sans-serif;
 }
 
 #top_banner a {
   color: yellow;
+}
+
+header {
+  font-family: 'flower3', sans-serif;
+  color: #000;
+}
+
+.container {
+  margin-left: 40px;
+  margin-right: 40px;
+  background-color: #ffffff;
 }
 
 #the-slider img {
@@ -34,11 +46,8 @@ width: 100%;
 
 }
 
-
-
-h1 {
-  font-family: 'flower3', sans-serif;
-
+h2 {
+  font-family: 'Nanum Brush Script', cursive;
 }
 
 p {
