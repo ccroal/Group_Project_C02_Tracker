@@ -21,5 +21,3 @@ const results = document.querySelector('#results');
     gridView.bindEvents();
   })
   }
-
-
