@@ -1,10 +1,14 @@
 const RequestHelper = require('../helpers/request_helper.js')
+const Calculate = require('./calculate.js')
 const PubSub = require('../helpers/pub_sub.js');
 
 const Results = function(){
   this.items = [];
   this.request = new RequestHelper('/app/calculator')
+
 }
+
+const calculate = new Calculate()
 
 Results.prototype.setupEventsListener = function(){
   PubSub.subscribe('FormView:formSubmit', (event) => {
@@ -16,6 +20,8 @@ Results.prototype.setupEventsListener = function(){
     this.delete(itemToDelete);
   })
 }
+
+
 
 Results.prototype.all = function(){
   this.request
