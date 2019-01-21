@@ -77,7 +77,7 @@ const Calculate = require('../models/calculate.js');
   })
 
   it('should calculate total CO2', function(){
-    const actual = result.calculateTotal(formInput.car, formInput.bus, formInput.train, formInput.plane, formInput.foodWaste, formInput.plasticWaste, formInput.energy)
+    const actual = result.calculateTotal(formInput)
     assert.strictEqual(actual, 8443)
   })
 
