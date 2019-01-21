@@ -7,7 +7,8 @@ db.calculator.insertMany([
     airTravel: 4000,
     food: 2090,
     plastic: 689,
-    power: 458
+    power: 458,
+    total: 9577
   },
 
   {
@@ -15,7 +16,8 @@ db.calculator.insertMany([
     airTravel: 2756,
     food: 3000,
     plastic: 500,
-    power: 900
+    power: 900,
+    total: 10906
   },
 
   {
@@ -23,7 +25,8 @@ db.calculator.insertMany([
     airTravel: 1000,
     food: 2000,
     plastic: 450,
-    power: 780
+    power: 780,
+    total: 8980
   },
 
   {
@@ -31,7 +34,8 @@ db.calculator.insertMany([
   airTravel: 2000,
   food: 2158,
   plastic: 600,
-  power: 900
+  power: 900,
+  total: 10658
   }
 
 ]);

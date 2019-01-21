@@ -1,4 +1,3 @@
-
 const Calculate = function(){
 
 };
@@ -53,14 +52,26 @@ Calculate.prototype.calculateEnergy = function(kwh){
   return Math.round(energy);
 };
 
-Calculate.prototype.calculateTotal = function(car, bus, train, plane, foodWaste, plasticWaste, energy){
-  const transportTotal = this.calculateTransport(car, bus, train);
-  const airTravelTotal = this.calculateAirTravel(plane);
-  const foodTotal = this.calculateFood(foodWaste);
-  const plasticWasteTotal = this.calculatePlastic(plasticWaste);
-  const energyTotal = this.calculateEnergy(energy);
+Calculate.prototype.calculateTotal = function(object){
+  const transportTotal = this.calculateTransport(object.car, object.bus, object.train);
+  const airTravelTotal = this.calculateAirTravel(object.plane);
+  const foodTotal = this.calculateFood(object.foodType);
+  const plasticWasteTotal = this.calculatePlastic(object.plasticWaste);
+  const energyTotal = this.calculateEnergy(object.energy);
   const total = transportTotal + airTravelTotal + foodTotal + plasticWasteTotal + energyTotal
   return total
 }
+
+Calculate.prototype.createResult = function (object) {
+  const result = {
+  transport: this.calculateTransport(object.car, object.bus, object.train),
+  airTravel: this.calculateAirTravel(object.plane),
+  food: this.calculateFood(object.foodType),
+  plastic: this.calculatePlastic(object.plasticWaste),
+  power: this.calculateEnergy(object.energy),
+  total: this.calculateTotal(object)
+  }
+  return result
+};
 
 module.exports = Calculate;

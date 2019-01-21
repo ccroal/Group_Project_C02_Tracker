@@ -3,12 +3,12 @@ const ResultView = require('./single_result_view.js');
 
 const GridView = function (container){
   this.container = container;
-}
+};
 
-GridView.prototype.bindEvents = function () => {
-  PubSub.subscribe('ResultsModel:all-results', (event) => {
-    this.render(event.detail);
-  })
+GridView.prototype.bindEvents = function () {
+    PubSub.subscribe('ResultsModel:all-results', (event) => {
+      this.render(event.detail);
+    });
 }
 
 GridView.prototype.resultSelectedButton = function (resultId) {
@@ -20,13 +20,13 @@ GridView.prototype.resultSelectedButton = function (resultId) {
     PubSub.publish('GridView:result-selected', event.target.value);
   })
 
-return button;
+  return button;
 }
 
 GridView.prototype.render = function (results){
   this.container.innerHTML = '';
-  const gridView = new GridView(this.container);
-  results.forEach((result) => gridView.render(result));
+  const resultView = new ResultView(this.container);
+  results.forEach((result) => resultView.render(result));
 };
 
 GridView.prototype.createDeleteButton = function (resultId){
@@ -39,7 +39,7 @@ GridView.prototype.createDeleteButton = function (resultId){
   })
 
   return button;
-}
+};
 
 
 module.exports = GridView;

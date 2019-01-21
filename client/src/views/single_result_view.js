@@ -31,6 +31,8 @@ ResultView.prototype.render = function (result){
   const airTravelText = `Your air travel results in ${result.airTravel}KgCO2e/year`;
   const airTravel = this.createDetail(airTravelText);
   resultContainer.appendChild(airTravel);
+
+  this.container.appendChild(resultContainer);
 }
 
 ResultView.prototype.createHeading = function (textContent){
@@ -46,6 +48,6 @@ ResultView.prototype.createDetail = function (textContent){
 
 }
 
-}
+
 
 module.exports = ResultView;
