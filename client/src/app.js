@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript Loaded');
 
 const formDiv = document.querySelector('div#form');
-const form = new FormView(formDiv)
-form.rendForm()
-form.setupEventListeners()
+const form = new FormView(formDiv);
+form.rendForm();
+form.setupEventListeners();
 
 
-const results = new Results()
-results.bindEvents()
-results.all()
+const results = new Results();
+results.setupEventsListener();
+results.all();
 });

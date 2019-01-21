@@ -21,10 +21,8 @@ FormView.prototype.setupEventListeners = function() {
   }
 
     PubSub.publish('FormView:formSubmit', newItems)
-    console.log(newItems);
 
-  event.target.reset()
-    console.log('submitted', newItems);
+    event.target.reset()
   })
 }
 
