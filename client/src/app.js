@@ -7,10 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript Loaded');
 
 const formDiv = document.querySelector('div#form');
-const form = new FormView(formDiv)
-form.rendForm()
-form.setupEventListeners()
-
+const form = new FormView(formDiv);
+form.rendForm();
+form.setupEventListeners();
 
 const gridView = document.querySelector('div#gridView')
 const grid = new GridView (gridView)
@@ -18,5 +17,6 @@ grid.bindEvents()
 
 const results = new Results()
 results.setupEventsListener()
+
 results.all();
 });
