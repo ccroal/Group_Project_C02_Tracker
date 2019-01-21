@@ -1,5 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js');
-const ResultView = require('./single_result_view.js');
+const SummaryView = require('./summary_view.js');
 
 const GridView = function (container){
   this.container = container;
@@ -25,8 +25,8 @@ GridView.prototype.resultSelectedButton = function (resultId) {
 
 GridView.prototype.render = function (results){
   this.container.innerHTML = '';
-  const resultView = new ResultView(this.container);
-  results.forEach((result) => resultView.render(result));
+  const summaryView = new SummaryView(this.container);
+  results.forEach((result) => summaryView.render(result));
 };
 
 GridView.prototype.createDeleteButton = function (resultId){

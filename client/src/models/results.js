@@ -1,7 +1,6 @@
 const RequestHelper = require('../helpers/request_helper.js')
 const Calculate = require('./calculate.js')
 const PubSub = require('../helpers/pub_sub.js');
-const Calculate = require('./calculate.js')
 
 const Results = function(){
   this.items = [];
