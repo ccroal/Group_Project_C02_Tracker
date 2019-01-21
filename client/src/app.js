@@ -2,22 +2,24 @@ const Results = require('./models/results.js');
 const FormView = require('./views/form_view.js');
 const GridView = require('./views/grid_view.js');
 
+
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript Loaded');
 
 
-const formContainer = document.querySelector('div#form')
-const formView = new FormView(formContainer);
-formView.rendForm();
-formView.setupEventListeners()
+const form = document.querySelector('#new-calculator');
+  form.addEventListener('click', function() {
+    const formView = new FormView();
+    console.log('working', formView);
+    formView.setupEventListeners();
+
+const results = document.querySelector('#results');
+  results.addEventListener('click', function() {
+    const gridContainer = document.querySelector('div#Co2-Info');
+    const gridView = new GridView(gridContainer);
+    console.log('working', gridView);
+    gridView.bindEvents();
+  })
+  }
 
 
-
-// const container = document.querySelector('div#Co2-Info');
-// const gridView = new GridView(container);
-// gridView.bindEvents();
-
-
-const results = new Results();
-results.all();
-})
