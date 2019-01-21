@@ -8,6 +8,7 @@ const GridView = function (container){
 GridView.prototype.bindEvents = function () {
     PubSub.subscribe('ResultsModel:all-results', (event) => {
       this.render(event.detail);
+      console.log(event.detail);
     });
 }
 

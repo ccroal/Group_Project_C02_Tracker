@@ -5,7 +5,7 @@ const PubSub = require('../helpers/pub_sub.js');
 const Results = function(){
   this.items = [];
 
-  this.request = new RequestHelper('/app/calculator')
+  this.request = new RequestHelper('/api/calculator')
 
 }
 

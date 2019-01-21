@@ -17,6 +17,6 @@ const grid = new GridView (gridView)
 grid.bindEvents()
 
 const results = new Results()
-results.bindEvents()
-results.all()
+results.setupEventsListener()
+results.all();
 });
