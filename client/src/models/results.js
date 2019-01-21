@@ -3,7 +3,7 @@ const PubSub = require('../helpers/pub_sub.js');
 
 const Results = function(){
   this.items = [];
-  this.request = new RequestHelper('/app/calculator')
+  this.request = new RequestHelper('/api/calculator')
 }
 
 Results.prototype.setupEventsListener = function(){
@@ -22,7 +22,7 @@ Results.prototype.all = function(){
   .get()
   .then((listItems) => {
     this.items = listItems;
-    PubSub.publish('Result:form-ready', this.items)
+    PubSub.publish('ResultsModel:all-results', this.items)
   })
   .catch((err) => console.error(err));
 }

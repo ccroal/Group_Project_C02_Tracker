@@ -1,11 +1,11 @@
-const FormView = require('./views/form_view.js');
-// const GridView = require('./views/grid_view.js');
-const Calculator = require('./models/calculate.js');
 const Results = require('./models/results.js');
+const FormView = require('./views/form_view.js');
+const GridView = require('./views/grid_view.js');
 
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript Loaded');
+
 
 const form = document.querySelector('#new-calculator');
   form.addEventListener('click', function() {
@@ -20,7 +20,6 @@ const results = document.querySelector('#results');
     console.log('working', gridView);
     gridView.bindEvents();
   })
+  }
 
-})
 
-});
