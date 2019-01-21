@@ -5,7 +5,6 @@ const FormView = function (container) {
 }
 
 FormView.prototype.setupEventListeners = function() {
-  // FormView.prototype.rendForm()
   this.container.addEventListener('submit', function (event) {
     event.preventDefault()
 
@@ -24,7 +23,7 @@ FormView.prototype.setupEventListeners = function() {
     PubSub.publish('FormView:formSubmit', newItems)
     console.log(newItems);
 
-  // event.target.reset()
+  event.target.reset()
     console.log('submitted', newItems);
   })
 }
