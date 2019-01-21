@@ -4,14 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
   <title>Co2 Emissions Tracker</title>
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/main.css">
   <script src="js/bundle.js"></script>
 </head>
 <body>
+
+<div id='top_banner'>
+  <nav>
+    <a href="/">Home</a> |
+    <a href="#New-Record">New-Record</a> |
+    <a href="#Statistics">Statistics</a> |
+    <a href="#Records">Results</a>
+  </nav>
+</div>
+
   <header>
     <h1>Co2 Emissions Tracker</h1>
   </header>
+
+  <h1> We love Our Planet, do you?</h1>
+
+  <p>Please help us save our planet with calculating your Co2 emissions. Thanks</p>
+ </div>
+
+
+ <div id="the-slider" class="carousel slide" data-ride="carousel">
+ <ol class="carousel-indicators">
+     <li data-target="#the-slider" data-slide-to="0" class="active"></li>
+     <li data-target="#the-slider" data-slide-to="1"></li>
+     <li data-target="#the-slider" data-slide-to="2"></li>
+     <li data-target="#the-slider" data-slide-to=""></li>
+     <li data-target="#the-slider" data-slide-to="4"></li>
+ </ol>
+          <!-- pic1 -->
+     <div class="carousel-inner">
+         <div class="item active">
+             <img src="./css/images/chimp.JPG" class="img-responsive" alt="...">
+         </div>
+              <!-- pic2 -->
+         <div class="item">
+            <img src="./css/images/bulb.jpeg" class="img-responsive" alt="...">
+         </div>
+                <!-- pic3 -->
+         <div class="item">
+            <img src="./css/images/smokestack.jpg" class="img-responsive" alt="...">
+         </div>
+                <!-- pic4 -->
+         <div class="item">
+            <img src="./css/images/cars.jpg" class="img-responsive" alt="...">
+         </div>
+                <!-- pic5 -->
+         <div class="item">
+            <img src="./css/images/litter.jpg" class="img-responsive" alt="...">
+         </div>
+
+
+     </div>
+
+ <!--controls-->
+ <a class="left carousel-control" href="#the-slider" role="button" data-slide="prev">
+ <span class="glyphicon glyphicon-chevron-left"></span>
+ </a>
+ <a class="right carousel-control" href="#the-slider" role="button" data-slide="next">
+ <span class="glyphicon glyphicon-chevron-right"></span>
+ </a>
+
+ </div>
 
   <div id="hot-bar">
     <nav>
@@ -26,9 +87,18 @@
 
   <p>This app helps you to keep track of your Co2 emissions</p>
 
+  <button type="button" id="new-calculator" name="calc-button"><h2>New Calculator</h2></button>
+
+  <button type="button" id="results" name="results-button"><h2>View Results</h2></button>
+
   <div id="Co2-Info">
 
   </div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 </body>
 </html>
