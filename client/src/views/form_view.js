@@ -5,7 +5,6 @@ const FormView = function (container) {
 }
 
 FormView.prototype.setupEventListeners = function() {
-  // FormView.prototype.rendForm()
   this.container.addEventListener('submit', function (event) {
     event.preventDefault()
 
@@ -17,11 +16,12 @@ FormView.prototype.setupEventListeners = function() {
      train: event.target.train.value,
      plane: event.target.plane.value,
      plasticWaste: event.target.plasticWaste.value,
-     // // foodType: event.target.foodtype.value,
+     foodType: event.target.foodtype.value,
      energy: event.target.energy.value
   }
 
     PubSub.publish('FormView:formSubmit', newItems)
+    console.log(newItems);
 
   event.target.reset()
     console.log('submitted', newItems);
@@ -55,7 +55,7 @@ formContainer.appendChild(question2)
 const answer2 = this.createInput('number', 'bus')
 formContainer.appendChild(answer2)
 
-const question3 = this.createQuestion('How many mailes do you travel by train each week?')
+const question3 = this.createQuestion('How many miles do you travel by train each week?')
 formContainer.appendChild(question3)
 
 const answer3 = this.createInput('number', 'train')

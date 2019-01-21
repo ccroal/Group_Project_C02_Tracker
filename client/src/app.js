@@ -6,18 +6,13 @@ const GridView = require('./views/grid_view.js');
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript Loaded');
 
+const formDiv = document.querySelector('div#form');
+const form = new FormView(formDiv)
+form.rendForm()
+form.setupEventListeners()
 
-const form = document.querySelector('#new-calculator');
-  form.addEventListener('click', function() {
-    const formView = new FormView();
-    console.log('working', formView);
-    formView.setupEventListeners();
 
-const results = document.querySelector('#results');
-  results.addEventListener('click', function() {
-    const gridContainer = document.querySelector('div#Co2-Info');
-    const gridView = new GridView(gridContainer);
-    console.log('working', gridView);
-    gridView.bindEvents();
-  })
-  }
+const results = new Results()
+results.bindEvents()
+results.all()
+});
