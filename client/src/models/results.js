@@ -25,7 +25,6 @@ Results.prototype.setupEventsListener = function(){
   })
   PubSub.subscribe('SummaryView:result-selected', (event) => {
     const itemToFind = event.detail;
-    console.log('Item to find', event.detail);
     this.findById(itemToFind)
   })
 }

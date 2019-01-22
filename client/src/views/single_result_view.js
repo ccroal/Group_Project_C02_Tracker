@@ -8,7 +8,6 @@ const ResultView = function (container){
 ResultView.prototype.bindEvents = function (){
   PubSub.subscribe('Results:item-selected', (event) => {
     foundItem = event.detail
-    console.log(foundItem);
     this.container.innerHTML = '';
     this.render(foundItem);
   })
