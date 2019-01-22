@@ -44,6 +44,7 @@ header h1 {
   color: #000;
   text-align: center;
   font-size: 80px;
+  padding-top: 20px;
 }
 
 .container {
@@ -115,6 +116,87 @@ ul {
   border-width: 5px;
 }
 
+#Co2Form-wrap p {
+  padding-top: 15px;
+  font-weight: normal;
+  /* font-size: 70px; */
+}
+
+#Co2Form-wrap h3 {
+  padding-top: 25px;
+  font-size: 50px;
+}
+
+#submit-button {
+  background-color: red;
+  color: yellow;
+  border: 3px solid red;
+  border-radius: 15px;
+}
+
+#car {
+  border-radius: 15px;
+  background-color: yellow;
+  text-align: center;
+}
+
+#bus {
+  border-radius: 15px;
+  background-color: yellow;
+  text-align: center;
+}
+
+#train {
+  border-radius: 15px;
+  background-color: yellow;
+  text-align: center;
+}
+
+#plane {
+  border-radius: 15px;
+  background-color: yellow;
+  text-align: center;
+}
+
+#foodWaste {
+  border-radius: 15px;
+  background-color: yellow;
+  text-align: center;
+}
+
+#plasticWaste {
+  border-radius: 15px;
+  background-color: yellow;
+  text-align: center;
+}
+
+#foodtype {
+  border-radius: 15px;
+  background-color: yellow;
+  text-align: center;
+}
+
+#energy {
+  border-radius: 15px;
+  background-color: yellow;
+  text-align: center;
+}
+
+
+#gridView {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  background-color: green;
+  color: yellow;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 15px;
+  border-color: green;
+  border-style: groove;
+  border-width: 5px;
+
+}
 .col-md-3 {
   margin-top: 50px;
   font-size: 25px;
@@ -130,6 +212,10 @@ ul {
 .col-md-3 img {
   height: 100px;
   width: 145px;
+}
+
+#result h2{
+  font-size: 40px;
 
 }
 /* #form {
