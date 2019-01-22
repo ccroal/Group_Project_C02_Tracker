@@ -38,7 +38,7 @@ mainForm.appendChild(formContainer)
 const heading = this.createHeading('Co2 Questions')
 formContainer.appendChild(heading)
 
-const transport = this .createHeading('Plane, Trains and Automobiles')
+const transport = this .createHeading('Planes, Trains and Automobiles')
 formContainer.appendChild(transport)
 
 const question1 = this.createQuestion('How many miles do you travel by car each week?')
