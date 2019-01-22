@@ -133,5 +133,7 @@ ul {
 
 }
 #main-canvas {
-  border:1px solid black;
+  /* border:1px solid black; */
+  background: #eee;;
+  text-align: center;
 }
