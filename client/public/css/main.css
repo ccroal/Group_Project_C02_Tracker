@@ -135,5 +135,7 @@ ul {
 #main-canvas {
   /* border:1px solid black; */
   background: #eee;;
-  text-align: center;
+  context.textAlign = "center";
+  width: 100%;
+  height: 400px;
 }
