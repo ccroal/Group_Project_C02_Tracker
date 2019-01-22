@@ -20,6 +20,7 @@ const powerAmountSummary = `Total Power: ${result.power}kgCO2e/year`;
 const power = this.createDetail(powerAmountSummary);
 summaryContainer.appendChild(power);
 
+
 const singleResult = this.createButton(result, 'View Detailed Result');
 singleResult.addEventListener('click', (event) => {
   resultSelected = event.target.value;
@@ -27,6 +28,7 @@ singleResult.addEventListener('click', (event) => {
 })
 
 summaryContainer.appendChild(singleResult);
+
 
 this.container.appendChild(summaryContainer)
 }

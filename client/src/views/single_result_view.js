@@ -1,4 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js');
+const Highcharts = require('highcharts')
 
 const ResultView = function (container){
   this.container = container;
@@ -41,6 +42,8 @@ ResultView.prototype.render = function (result){
   const airTravel = this.createDetail(airTravelText);
   resultContainer.appendChild(airTravel);
 
+  this.createChart(result);
+
   this.container.appendChild(resultContainer);
 }
 
@@ -56,6 +59,96 @@ ResultView.prototype.createDetail = function (textContent){
   return detail;
 
 }
+
+ResultView.prototype.createChart = function(result){
+  const chartDiv = document.createElement('div');
+  chartDiv.id = 'highchart';
+  console.log('result', result);
+
+const chart = Highcharts.chart(this.container, {
+        chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+       },
+       title: {
+           text: 'CO2 Consumption'
+       },
+       tooltip: {
+    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+
+},
+
+plotOptions: {
+    pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        dataLabels: {
+            enabled: true,
+            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+            style: {
+                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+            }
+        }
+      }
+    },
+
+       series: [{
+         name: 'CO2 Consumption',
+         colorByPoint: true,
+         data: [{
+           name: 'Transport',
+           y: result.transport,
+         },{
+           name: 'Power',
+           y: result.power,
+         },{
+           name: 'Food',
+           y: result.food,
+         },{
+           name: 'Air Travel',
+           y: result.airTravel,
+
+     }]
+   }]
+
+  //  xAxis: {
+  // categories: ['Transport', 'Power', 'Food', 'Air Travel']},
+  //
+  //     yAxis: {
+  //         title: {
+  //             text: 'CO2 Consumption'
+  //         }
+  //     },
+  //
+  //  series: [{
+  //  data: [result.transport, result.power, result.food, result.airTravel]}]
+
+})
+};
+
+
+
+
+
+
+   //     xAxis: {
+   //         categories: ['Transport', 'Power', 'Food', 'Air Travel']
+   //     },
+   //     yAxis: {
+   //         title: {
+   //             text: 'CO2 Consumption'
+   //         }
+   //     },
+   //     series: [{
+   //         data: [result.transport, result.power, result.food, result.airTravel]
+   //     }]
+   // });
+
+   // console.log('chart', chart);
+
+
 
 
 

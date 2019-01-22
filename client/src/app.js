@@ -19,7 +19,6 @@ const results = new Results()
 results.setupEventsListener()
 results.all();
 
-
 const formDiv = document.querySelector('div#form');
 const form = new FormView(formDiv);
 form.rendForm();
