@@ -43,6 +43,15 @@ ResultView.prototype.render = function (result){
 
   this.createChart(result);
 
+  const deleteButton = this.createButton(result, 'Delete Result', 'delete-button');
+    deleteButton.addEventListener('click', (event) => {
+      const itemToDelete = result;
+      PubSub.publish('ResultView:delete-selected', itemToDelete)
+      console.log(itemToDelete);
+    })
+  resultContainer.appendChild(deleteButton);
+
+
   this.container.appendChild(resultContainer);
 }
 
@@ -56,8 +65,17 @@ ResultView.prototype.createDetail = function (textContent){
   const detail = document.createElement('h3');
   detail.textContent = textContent;
   return detail;
-
 }
+
+ResultView.prototype.createButton = function (result, textContent, id){
+  const button = document.createElement('button');
+  button.textContent = textContent;
+  button.id = id
+  button.value = result
+  return button
+}
+
+
 
 ResultView.prototype.createChart = function(result){
   const chartDiv = document.createElement('div');

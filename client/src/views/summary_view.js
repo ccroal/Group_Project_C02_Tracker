@@ -21,7 +21,7 @@ const power = this.createDetail(powerAmountSummary);
 summaryContainer.appendChild(power);
 
 
-const singleResult = this.createButton(result, 'View Detailed Result');
+const singleResult = this.createButton(result, 'View Detailed Result', 'single-view-button');
 singleResult.addEventListener('click', (event) => {
   resultSelected = event.target.value;
   PubSub.publish('SummaryView:result-selected', resultSelected)
@@ -45,10 +45,10 @@ SummaryView.prototype.createDetail = function (textContent){
   return detail;
 }
 
-SummaryView.prototype.createButton = function (result, textContent){
+SummaryView.prototype.createButton = function (result, textContent, id){
   const button = document.createElement('button');
   button.textContent = textContent
-  button.id = 'single-view-button';
+  button.id = id;
   button.value = result._id
   return button
 }

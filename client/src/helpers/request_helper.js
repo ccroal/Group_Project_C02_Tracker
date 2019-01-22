@@ -29,4 +29,6 @@ RequestHelper.prototype.delete = function (id) {
     .then((response) => response.json());
 };
 
+
+
 module.exports = RequestHelper;

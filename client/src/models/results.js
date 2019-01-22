@@ -27,6 +27,10 @@ Results.prototype.setupEventsListener = function(){
     const itemToFind = event.detail;
     this.findById(itemToFind)
   })
+  PubSub.subscribe('ResultView:delete-selected', (event) => {
+    const deleteResult = event.detail;
+    this.delete(deleteResult);
+  })
 }
 
 
@@ -37,7 +41,6 @@ Results.prototype.all = function(){
   .then((listItems) => {
     this.items = listItems;
     PubSub.publish('ResultsModel:all-results', this.items)
-    console.log(this.items);
   })
   .catch((err) => console.error(err));
 }

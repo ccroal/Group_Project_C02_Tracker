@@ -8,7 +8,11 @@ const GridView = function (container){
 GridView.prototype.bindEvents = function () {
     PubSub.subscribe('ResultsModel:all-results', (event) => {
       this.render(event.detail);
-      console.log('received', event.detail);
+    });
+    PubSub.subscribe('Results:deleted-item', (event) => {
+      console.log(event.detail);
+      this.container.innerHTML = '';
+      this.render(event.detail);
     });
 }
 
