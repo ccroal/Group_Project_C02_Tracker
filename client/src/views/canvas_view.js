@@ -6,8 +6,9 @@ CanvasView.prototype.render = function () {
   if (!canvas) return;
   console.log('canvas', canvas);
   const context = canvas.getContext('2d');
-  context.font = '40pt Avenir';
+  context.font = '40pt Nanum Brush Script';
   context.textAlign = "left";
+
   context.fillText('You are becoming more green!', 150, 100);
 
 
