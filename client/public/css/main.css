@@ -132,8 +132,6 @@ ul {
   width: 145px;
 
 }
-/* #form {
-  font-size: 30px;
-  font-weight: bolder;
-  color: yellow;
-} */
+#main-canvas {
+  border:1px solid black;
+}

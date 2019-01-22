@@ -113,43 +113,12 @@ plotOptions: {
    }]
 
 
-  //  xAxis: {
-  // categories: ['Transport', 'Power', 'Food', 'Air Travel']},
-  //
-  //     yAxis: {
-  //         title: {
-  //             text: 'CO2 Consumption'
-  //         }
-  //     },
-  //
-  //  series: [{
-  //  data: [result.transport, result.power, result.food, result.airTravel]}]
-
 })
+
+
+
+
 };
-
-
-
-
-
-
-   //     xAxis: {
-   //         categories: ['Transport', 'Power', 'Food', 'Air Travel']
-   //     },
-   //     yAxis: {
-   //         title: {
-   //             text: 'CO2 Consumption'
-   //         }
-   //     },
-   //     series: [{
-   //         data: [result.transport, result.power, result.food, result.airTravel]
-   //     }]
-   // });
-
-   // console.log('chart', chart);
-
-
-
 
 
 module.exports = ResultView;
