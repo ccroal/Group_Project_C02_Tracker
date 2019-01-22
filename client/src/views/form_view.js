@@ -128,6 +128,7 @@ FormView.prototype.createInput = function (type, idName){
   input.type = type
   input.id = idName
   input.min = '0'
+  input.value = 0
   return input;
 };
 
