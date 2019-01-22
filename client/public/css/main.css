@@ -241,8 +241,10 @@ ul {
   border-radius: 15px;
   cursor: grabbing;
 }
-/* #form {
-  font-size: 30px;
-  font-weight: bolder;
-  color: yellow;
-} */
+#main-canvas {
+  /* border:1px solid black; */
+  background: #eee;;
+  context.textAlign = "center";
+  width: 100%;
+  height: 400px;
+}
