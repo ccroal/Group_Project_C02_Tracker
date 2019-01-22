@@ -5,22 +5,28 @@ const ResultView = require('../views/single_result_view.js')
 
 const Results = function(){
   this.items = [];
-  this.request = new RequestHelper('/api/calculator')
-
+  this.request = new RequestHelper('/api/calculator');
 }
+
 
 const calculate = new Calculate()
 
 Results.prototype.setupEventsListener = function(){
 
   PubSub.subscribe('FormView:formSubmit', (event) => {
-  result = this.calculate(event.detail);
-  this.add(result);
-  this.renderResult(result)
+    const container = document.querySelector('div#form')
+    result = this.calculate(event.detail);
+    this.add(result);
+    this.renderResult(result, container)
   })
   PubSub.subscribe('GridView:result-delete-clicked', (event) => {
     const itemToDelete = event.detail;
     this.delete(itemToDelete);
+  })
+  PubSub.subscribe('SummaryView:result-selected', (event) => {
+    const itemToFind = event.detail;
+    console.log('Item to find', event.detail);
+    this.findById(itemToFind)
   })
 }
 
@@ -35,6 +41,15 @@ Results.prototype.all = function(){
     console.log(this.items);
   })
   .catch((err) => console.error(err));
+}
+
+Results.prototype.findById = function(id){
+  this.request
+  .findById(id)
+  .then((item) => {
+    PubSub.publish('Results:item-selected', item)
+  })
+    .catch((err) => console.error(err));
 }
 
 Results.prototype.add = function(newItem){
@@ -64,8 +79,7 @@ Results.prototype.calculate = function(formObject){
  return result
 }
 
-Results.prototype.renderResult = function(resultObject){
-  const container = document.querySelector('div#form')
+Results.prototype.renderResult = function(resultObject, container){
   const resultView = new ResultView(container)
   container.innerHTML = '',
   resultView.render(resultObject)
