@@ -7,7 +7,6 @@ const SummaryView = function (container){
 SummaryView.prototype.render = function(result){
   const summaryContainer = document.createElement('div');
   summaryContainer.id = 'result';
-}
 
 const totalConsumptionSummary = `Total CO2 Consumption: ${result.total}kgCO2e/year`;
 const total = this.createHeading(totalConsumptionSummary);
@@ -20,6 +19,7 @@ summaryContainer.appendChild(transport);
 const powerAmountSummary = `Total Power: ${result.power}kgCO2e/year`;
 const power = this.createDetail(powerAmountSummary);
 summaryContainer.appendChild(power);
+}
 
 SummaryView.prototype.createHeading = function (textContent){
   const heading = document.createElement('h4');
@@ -31,7 +31,7 @@ SummaryView.prototype.createDetail = function (textContent){
   const detail = document.createElement('h5');
   detail.textContent = textContent;
   return detail;
-
+}
 
 
 module.exports = SummaryView;
