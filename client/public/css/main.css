@@ -51,6 +51,9 @@ header h1 {
   /* margin-left: 40px;
   margin-right: 150px; */
   background-color: #ffffff;
+  outline-style: groove;
+  outline-color: #ffffff;
+  outline-width: medium;
 }
 
 #the-slider img {
@@ -110,10 +113,17 @@ ul {
   color: yellow;
   padding-top: 15px;
   padding-bottom: 15px;
-  border-radius: 15px;
+  /* border-radius: 15px;
   border-color: green;
   border-style: groove;
-  border-width: 5px;
+  border-width: 5px; */
+  /* outline-color: lightgreen;
+  outline-style: ridge;
+  outline-width: medium;
+  outline-radius: 15px; */
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ddd;
+
 }
 
 #Co2Form-wrap p {
@@ -217,6 +227,11 @@ ul {
 #result h2{
   font-size: 40px;
 
+}
+
+.results_h3 {
+  text-align: center;
+  font-size: 35px;
 }
 /* #form {
   font-size: 30px;
