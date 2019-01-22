@@ -112,6 +112,7 @@ plotOptions: {
      }]
    }]
 
+
   //  xAxis: {
   // categories: ['Transport', 'Power', 'Food', 'Air Travel']},
   //
