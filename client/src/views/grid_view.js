@@ -8,7 +8,11 @@ const GridView = function (container){
 GridView.prototype.bindEvents = function () {
     PubSub.subscribe('ResultsModel:all-results', (event) => {
       this.render(event.detail);
+    });
+    PubSub.subscribe('Results:deleted-item', (event) => {
       console.log(event.detail);
+      this.container.innerHTML = '';
+      this.render(event.detail);
     });
 }
 
@@ -25,7 +29,6 @@ GridView.prototype.resultSelectedButton = function (resultId) {
 }
 
 GridView.prototype.render = function (results){
-  this.container.innerHTML = '';
   const summaryView = new SummaryView(this.container);
   results.forEach((result) => summaryView.render(result));
 };
