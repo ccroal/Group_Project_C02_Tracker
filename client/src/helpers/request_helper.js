@@ -7,6 +7,12 @@ RequestHelper.prototype.get = function () {
     .then((response) => response.json());
 };
 
+RequestHelper.prototype.findById = function (id) {
+  return fetch(`${this.url}/${id}`)
+    .then((response) => response.json());
+}
+
+
 RequestHelper.prototype.post = function (payload){
   return fetch(this.url, {
     method:'POST',
@@ -22,5 +28,7 @@ RequestHelper.prototype.delete = function (id) {
   })
     .then((response) => response.json());
 };
+
+
 
 module.exports = RequestHelper;
