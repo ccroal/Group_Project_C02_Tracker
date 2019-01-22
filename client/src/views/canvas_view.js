@@ -8,8 +8,10 @@ CanvasView.prototype.render = function () {
 
 
 
-  context.font = "20px Avenir";
+context.font = "20px Avenir";
 context.fillText("You are one step closer to becoming more green...", 10, 50);
+context.textAlign = "center";
+
 
   const img = document.createElement('img');
   img.src = "images/leaf_vector.png"
