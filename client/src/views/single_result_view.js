@@ -1,4 +1,5 @@
 const PubSub = require('../helpers/pub_sub.js');
+const Highcharts = require('highcharts')
 
 const ResultView = function (container){
   this.container = container;
@@ -32,6 +33,8 @@ ResultView.prototype.render = function (result){
   const airTravel = this.createDetail(airTravelText);
   resultContainer.appendChild(airTravel);
 
+  this.createChart(result);
+
   this.container.appendChild(resultContainer);
 }
 
@@ -47,6 +50,36 @@ ResultView.prototype.createDetail = function (textContent){
   return detail;
 
 }
+
+ResultView.prototype.createChart = function(result){
+  const chartDiv = document.createElement('div');
+  chartDiv.id = 'highchart';
+  console.log('result', result);
+
+
+const chart = Highcharts.chart(this.container, {
+       chart: {
+           type: 'bar'
+       },
+       title: {
+           text: 'CO2 Consumption'
+       },
+       xAxis: {
+           categories: ['Transport', 'Power', 'Food', 'Air Travel']
+       },
+       yAxis: {
+           title: {
+               text: 'CO2 Consumption'
+           }
+       },
+       series: [{
+           data: [result.transport, result.power, result.food, result.airTravel]
+       }]
+   });
+
+   console.log('chart', chart);
+}
+
 
 
 
