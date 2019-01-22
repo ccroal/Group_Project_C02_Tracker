@@ -20,6 +20,7 @@ const powerAmountSummary = `Total Power: ${result.power}kgCO2e/year`;
 const power = this.createDetail(powerAmountSummary);
 summaryContainer.appendChild(power);
 
+
 this.container.appendChild(summaryContainer)
 }
 
