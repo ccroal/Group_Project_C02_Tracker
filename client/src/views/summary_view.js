@@ -26,9 +26,15 @@ singleResult.addEventListener('click', (event) => {
   resultSelected = event.target.value;
   PubSub.publish('SummaryView:result-selected', resultSelected)
 })
-
 summaryContainer.appendChild(singleResult);
 
+const deleteButton = this.createButton(result, 'Delete Result', 'delete-button');
+deleteButton.addEventListener('click', (event) => {
+  const itemToDelete = result;
+  PubSub.publish('SummaryView:delete-selected', itemToDelete)
+  console.log(itemToDelete);
+    })
+summaryContainer.appendChild(deleteButton);
 
 this.container.appendChild(summaryContainer)
 }

@@ -27,7 +27,7 @@ Results.prototype.setupEventsListener = function(){
     const itemToFind = event.detail;
     this.findById(itemToFind)
   })
-  PubSub.subscribe('ResultView:delete-selected', (event) => {
+  PubSub.subscribe('SummaryView:delete-selected', (event) => {
     const deleteResult = event.detail;
     this.delete(deleteResult);
   })
