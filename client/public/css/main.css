@@ -24,6 +24,9 @@ body {
   position: sticky;
   font-family: 'flower3', sans-serif;
   margin-bottom: 20px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0 0 10px yellow;
 }
 
 #top_banner a {
@@ -122,7 +125,7 @@ ul {
   outline-width: medium;
   outline-radius: 15px; */
   border-radius: 15px;
-  box-shadow: 0 0 10px #ddd;
+  box-shadow: 0 0 10px yellow;
 
 }
 
