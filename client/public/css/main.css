@@ -254,6 +254,16 @@ ul {
   border-radius: 15px;
   cursor: grabbing;
 }
+
+
+#delete-button {
+  background-color: red;
+  color: yellow;
+  border-radius: 15px;
+  cursor: grabbing;
+}
+
+
 #main-canvas {
   /* border:1px solid black; */
   background: #eee;;
@@ -271,4 +281,3 @@ ul {
   font-weight: bolder;
   color: yellow;
 } */
-
