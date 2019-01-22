@@ -24,6 +24,7 @@ body {
   position: sticky;
   font-family: 'flower3', sans-serif;
   margin-bottom: 20px;
+  cursor: grab;
 }
 
 #top_banner a {
@@ -37,6 +38,7 @@ body {
   color: green;
   border-radius: 10px;
   border-color: yellow;
+  cursor: grabbing;
 }
 
 header h1 {
@@ -56,6 +58,11 @@ header h1 {
 #the-slider img {
 
 width: 100%;
+
+}
+
+.carousel-indicators {
+  /* margin-top: 50px; */
 
 }
 
@@ -89,12 +96,13 @@ ul {
 
 }
 
-.carousel-item {
+/* .carousel-item {
   margin: 0px
-}
+} */
 
 .d-block {
   height: 440px;
+  border-radius: 15px;
 }
 
 .glyphicon {
@@ -194,7 +202,7 @@ ul {
   border-radius: 15px;
   border-color: green;
   border-style: groove;
-  border-width: 5px;
+  border-width: 2px;
 
 }
 .col-md-3 {
@@ -214,9 +222,24 @@ ul {
   width: 145px;
 }
 
-#result h2{
+#result h2 {
   font-size: 40px;
+}
 
+#results h5 {
+  font-size: 35px;
+}
+
+#result h4 {
+  font-size: 40px;
+  padding-top: 15px;
+}
+
+#single-view-button {
+  background-color: yellow;
+  color: green;
+  border-radius: 15px;
+  cursor: grabbing;
 }
 /* #form {
   font-size: 30px;
