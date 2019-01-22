@@ -32,6 +32,7 @@ Results.prototype.all = function(){
   .then((listItems) => {
     this.items = listItems;
     PubSub.publish('ResultsModel:all-results', this.items)
+    console.log(this.items);
   })
   .catch((err) => console.error(err));
 }
