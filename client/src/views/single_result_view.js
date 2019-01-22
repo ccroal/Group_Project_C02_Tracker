@@ -5,6 +5,15 @@ const ResultView = function (container){
   this.container = container;
 }
 
+ResultView.prototype.bindEvents = function (){
+  PubSub.subscribe('Results:item-selected', (event) => {
+    foundItem = event.detail
+    console.log(foundItem);
+    this.container.innerHTML = '';
+    this.render(foundItem);
+  })
+}
+
 ResultView.prototype.render = function (result){
   const resultContainer = document.createElement('div');
   resultContainer.id = 'result';
