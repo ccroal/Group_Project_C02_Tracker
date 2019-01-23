@@ -280,17 +280,9 @@ ul {
   padding-left: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
-  /* border-radius: 15px;
-  border-color: green;
-  border-style: groove;
-  border-width: 5px; */
-  /* outline-color: lightgreen;
-  outline-style: ridge;
-  outline-width: medium;
-  outline-radius: 15px; */
   border-radius: 15px;
   box-shadow: 0 0 10px yellow;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 }
 
 #statistics h1 {
@@ -365,7 +357,7 @@ ul {
 
 #single-view-button {
   background-color: yellow;
-  color: green;
+  color: red;
   border-radius: 15px;
   cursor: grabbing;
 }
@@ -401,15 +393,10 @@ ul {
   color: yellow;
   padding-top: 15px;
   padding-bottom: 15px;
-  /* border-radius: 15px;
-  border-color: green;
-  border-style: groove;
-  border-width: 5px; */
-  /* outline-color: lightgreen;
-  outline-style: ridge;
-  outline-width: medium;
-  outline-radius: 15px; */
-  border-radius: 15px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   box-shadow: 0 0 10px yellow;
 }
 
