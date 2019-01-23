@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
-  <title>Co2 Emissions Tracker</title>
+  <title>Co2 Statistics</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/main.css">
   <script src="js/bundle.js"></script>
@@ -24,9 +24,13 @@
   </nav>
 </div>
 
-<div id="Statistics">
+  <header>
+    <h1>Environment Statistics</h1>
+  </header>
 
-  <h1>Environment Statistics</h1>
+  <div id="statistics">
+
+  <img src="./css/images/attenborough.jpg" align="center" style="width:99%; height:300px; border-top-left-radius: 15px; border-top-right-radius: 15px; object-location:center;" alt="">
 
   <h2>Countries Overall Co2</h2>
 
@@ -34,24 +38,25 @@
 
   <p>In 2018 India’s CO2 emissions has seen a 6.3%. China has the second largest increases in CO2 emissions at 4.7%, the US was third at an increase of 2.5%.</p>
 
-  <p>Here is a list of countries with the highest MtCO<sub>2</sub> (metric tons of carbon dioxide) rate</p>
-  <ul>
-    <li>China - 9839 MtCO<sub>2</sub></li>
-    <li>USA - 5279 MtCO<sub>2</sub></li>
-    <li>India - 2467 MtCO<sub>2</sub></li>
-    <li>Russia - 1693 MtCO<sub>2</sub></li>
-    <li>Jappan - 1205 MtCO<sub>2</sub></li>
-    <li>Germany - 799 MtCO<sub>2</sub></li>
-    <li>Iran -  672 MtCO<sub>2</sub></li>
-    <li>Saui Arabia - 635 MtCO<sub>2</sub></li>
-    <li>South Korea - 616 MtCO<sub>2</sub></li>
-    <li>Canada - 573 MtCO<sub>2</sub></li>
-  </ul>
+  <p>Here is a list of the worst countries with the highest MtCO<sub>2</sub> (metric tons of carbon dioxide) rate</p>
+  <ol id="carbon_list">
+    <img src="./css/images/carbon_chart.png" alt="chart" align="right" style="width:600px; height:220px; margin:10px; padding-right:30px; padding-bottom:50px; ">
+    <li>China:- 9839 MtCO<sub>2</sub></li>
+    <li>USA:- 5279 MtCO<sub>2</sub></li>
+    <li>India:- 2467 MtCO<sub>2</sub></li>
+    <li>Russia:- 1693 MtCO<sub>2</sub></li>
+    <li>Japan:- 1205 MtCO<sub>2</sub></li>
+    <!-- <li>Germany:- 799 MtCO<sub>2</sub></li>
+    <li>Iran:- 672 MtCO<sub>2</sub></li>
+    <li>Saui Arabia:- 635 MtCO<sub>2</sub></li>
+    <li>South Korea:- 616 MtCO<sub>2</sub></li>
+    <li>Canada:- 573 MtCO<sub>2</sub></li> -->
+  </ol>
 
   <h2>Deforestation</h2>
 
   <p>Deforestation is the conversion of forested areas to non-forest land for use such as arable land, pasture, urban use, logged area, or wasteland.</p>
-
+  <img src="./css/images/deforestation.jpg" align="left" alt="deforestation-image" style="width:300px; height:245px; margin:10px; margin-right: 15px; border-radius: 10px;"/>
   <p>Forests cover 30% of the earth’s land.</p>
 
   <p> Loss of forests contributes between 12% and 17% percent of annual global greenhouse gas emissions.</p>
@@ -62,24 +67,28 @@
 
   <h2>Recycling</h2>
 
-  <p>Americans use more than 67 million tons of paper per year, or about 580 pounds per person.</p>
+  <p>Americans use more than 67 million tons of paper per year, or about 580 pounds per person.</p>  <img src="./css/images/world-recycle.jpg" align="right" style="width:250px; height:250px; margin-right:15px; padding-bottom:50px; border-radius:10px;" alt="world-recycle">
 
   <p>Each ton of recycled paper can save 17 trees, 380 gallons of oil, three cubic yards of landfill space, 4,000 kilowatts of energy and 7,000 gallons of water!</p>
-
   <p>Glass is 100% recyclable and can be recycled endlessly without loss in quality or purity.</p>
-
   <p>One ton of carbon dioxide is reduced for every six tons of recycled container glass used in the manufacturing process.</p>
 
-  <p>Here is a list from 2017 of the top 5 countries for recycling and their recycling rate.</p>
+  <p>Below is a list from 2017 of the top 5 countries for recycling and their recycling rate:</p>
 
-  <ul>
+  <ol id="recyc-list">
     <li>Germany - 56.1%</li>
     <li>Austria - 53.8%</li>
     <li>South Korea - 53.7%</li>
     <li>Wales - 52.2%</li>
     <li>Switzerland & Italy- 49.7%</li>
-  </ul>
+  </ol>
 
+</div>
+
+<div class="page-footer">
+  <h2>Help Us Save the Planet, Thanks x</h2>
+  <p>With love & creation from Chris, David, Mark & Scott P.</p>
+  <p>All rights reserved</p>
 </div>
 
 
