@@ -17,7 +17,7 @@ CanvasView.prototype.render = function () {
 
   const img = document.createElement('img');
 
-  img.src = "images/leaf-png-1.png"
+  img.src = "images/leaf.png"
   console.log('img', img);
   context.drawImage(img, 50, 50);
 
@@ -28,12 +28,13 @@ CanvasView.prototype.render = function () {
   //   context.stroke()
   // }
 
-  canvas.addEventListener('mousemove', (event) => {
-    console.log('clicked', event);
-    drawImage(event.x, event.y);
-    var offset = $("#main-canvas").offset();
-startX = evt.pageX - offset.left;
-startY = evt.pageY - offset.top;
+  canvas.addEventListener('mousemove', (evt) => {
+    console.log('clicked', evt);
+    drawImage(evt.x, evt.y);
+    canvas.onclick = function (evt) {
+        var offX = evt.layerX - canvas.offsetLeft;
+        var offY = evt.layerY - canvas.offsetTop;
+    }
 
   })
 
