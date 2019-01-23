@@ -190,6 +190,7 @@ ul {
   border: 3px solid red;
   border-radius: 15px;
   margin-left: 10px;
+  box-shadow: 0 0 10px yellow;
 }
 
 #new-button a {
@@ -203,6 +204,7 @@ ul {
   border: 3px solid red;
   border-radius: 15px;
   margin-left: 10px;
+  box-shadow: 0 0 10px yellow;
 }
 
 #res-button a {
@@ -216,6 +218,7 @@ ul {
   border: 3px solid red;
   border-radius: 15px;
   margin-left: 10px;
+  box-shadow: 0 0 10px yellow;
 }
 
 #stats-button a {
