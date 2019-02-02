@@ -1,3 +1,7 @@
+A web application designed to calculate a person's carbon footprint.  Built using JavaScript, HTML, CSS, Webpack, Express and MongoDB. 
+
+
+
 # Installing npm packages
 
 1. npm init
